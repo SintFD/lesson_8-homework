@@ -6,9 +6,16 @@
   box-sizing: border-box;
 }
 
-.business-card {
+.business-card,
+.interactive-button {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.business-card__title,
+.interactive-button__title {
+  margin-bottom: 50px;
 }
 
 .business-card__container {
@@ -19,7 +26,7 @@
   height: 300px;
   background-repeat: no-repeat;
   background-position: center;
-  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .business-card__logo {
@@ -39,4 +46,20 @@
   font-family: "Ribeye Marrow", serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.interactive-button__emoji {
+  width: 165px;
+  height: 150px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-image: url("../photo/emoji.jpg");
+  background-size: 350px;
+  background-repeat: no-repeat;
+  background-position-x: -3px;
+  transition: background-position-x 1s ease-in-out;
+}
+
+.interactive-button__emoji:hover {
+  background-position-x: -178px;
 }
