@@ -6,21 +6,28 @@
   box-sizing: border-box;
 }
 
+ul,
+li {
+  list-style-type: none;
+}
+
 .business-card,
-.interactive-button {
+.interactive-button,
+.game {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .business-card__title,
-.interactive-button__title {
+.interactive-button__title,
+.game__title {
   margin-bottom: 50px;
 }
 
 .business-card__container {
   position: relative;
-  background-image: url("../photo/754610743404514.jpeg");
+  background-image: url("../photo/sea.jpeg");
   border-radius: 20px;
   width: 550px;
   height: 300px;
@@ -49,6 +56,8 @@
 }
 
 .interactive-button__emoji {
+  position: relative;
+  top: -10px;
   width: 165px;
   height: 150px;
   border-radius: 20px;
@@ -58,8 +67,75 @@
   background-repeat: no-repeat;
   background-position-x: -3px;
   transition: background-position-x 1s ease-in-out;
+  margin-bottom: 50px;
 }
 
 .interactive-button__emoji:hover {
   background-position-x: -178px;
+}
+
+.game__container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin-bottom: 30px;
+  border: 1px black solid;
+  background-image: url("../photo/large-illustration-of-objects-in-a-room.jpg");
+  background-size: cover;
+}
+
+.game__sofa {
+  width: 50px;
+  transform: scaleX(-1);
+  position: absolute;
+  bottom: 156px;
+  left: 40px;
+  filter: brightness(90%);
+}
+
+.game__statuette {
+  width: 35px;
+  position: absolute;
+  top: 103px;
+  right: 58px;
+}
+
+.game__tangerines {
+  position: absolute;
+  width: 45px;
+  bottom: 105px;
+  right: 53px;
+  filter: hue-rotate(-20deg);
+  filter: brightness(90%);
+}
+
+.game__newspaper {
+  position: absolute;
+  width: 69px;
+  bottom: 134px;
+  left: 131px;
+  transform: rotate(-15deg);
+}
+
+.conditions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.conditions__list {
+  display: flex;
+  gap: 30px;
+  padding: 30px 30px 10px 30px;
+}
+
+.conditions__img {
+  height: 100px;
+}
+
+.game__container img:active {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 1px;
 }
